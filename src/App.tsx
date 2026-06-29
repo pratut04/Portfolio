@@ -874,9 +874,6 @@ function OtherCard({ p, i }: { p: typeof OTHER_PROJECTS[0]; i: number }) {
       <div className="p-4">
         <h4 className="font-black text-sm mb-1.5" style={{ color: 'var(--text-primary)' }}>{p.title}</h4>
         <ProjectDescription text={p.description} clamp={3} />
-        <div className="flex flex-wrap gap-1 mb-3">
-          {p.tech.slice(0, 4).map(t => <span key={t} className="tech-pill">{t}</span>)}
-        </div>
         <div className="flex items-center justify-between pt-2" style={{ borderTop: '1px solid var(--border)' }}>
           <a href={p.live} target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs font-bold hover:gap-2 transition-all"
