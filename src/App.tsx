@@ -201,30 +201,6 @@ function ScrollProgress() {
   );
 }
 
-// ─── Floating Particles ────────────────────────────────────────────────────────
-
-function Particles() {
-  const items = Array.from({ length: 18 }, (_, i) => i);
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      {items.map(i => (
-        <div
-          key={i}
-          className="particle"
-          style={{
-            left:            `${5 + (i * 5.5) % 90}%`,
-            bottom:          `${(i * 7) % 40}%`,
-            animationDelay:  `${(i * 0.45) % 8}s`,
-            animationDuration:`${6 + (i % 5)}s`,
-            width:           `${2 + (i % 3)}px`,
-            height:          `${2 + (i % 3)}px`,
-            opacity:          0,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────
 
@@ -379,8 +355,7 @@ function HeroSection() {
       <div className="orb orb-2" aria-hidden />
       <div className="orb orb-3" aria-hidden />
 
-      {/* Particles */}
-      <Particles />
+
 
       {/* Grid overlay — subtle dots, hidden */}
       <div

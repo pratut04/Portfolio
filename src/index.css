@@ -303,26 +303,7 @@
   66%       { transform: translate(-20px, 20px) scale(0.95); }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   FLOATING PARTICLES
-═══════════════════════════════════════════════════════════════ */
-.particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--accent);
-  opacity: 0;
-  animation: particleFly 8s ease-in-out infinite;
-  pointer-events: none;
-}
 
-@keyframes particleFly {
-  0%   { transform: translateY(0) translateX(0); opacity: 0; }
-  20%  { opacity: 0.7; }
-  80%  { opacity: 0.4; }
-  100% { transform: translateY(-120px) translateX(40px); opacity: 0; }
-}
 
 /* ═══════════════════════════════════════════════════════════════
    HERO ANIMATIONS
