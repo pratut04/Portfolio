@@ -12,7 +12,7 @@ import {
 const ThemeContext = React.createContext<{
   dark: boolean;
   toggle: () => void;
-}>({ dark: false, toggle: () => {} });
+}>({ dark: false, toggle: () => { } });
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -34,12 +34,12 @@ function useInView(threshold = 0.12) {
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const NAV = [
-  { id: 'about',      label: 'About'      },
-  { id: 'skills',     label: 'Skills'     },
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
   { id: 'internship', label: 'Experience' },
-  { id: 'projects',   label: 'Projects'   },
-  { id: 'education',  label: 'Education'  },
-  { id: 'contact',    label: 'Contact'    },
+  { id: 'projects', label: 'Projects' },
+  { id: 'education', label: 'Education' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 const FEATURED_PROJECTS = [
@@ -55,6 +55,7 @@ const FEATURED_PROJECTS = [
     description: 'Built a full-stack CRM application to streamline lead management and sales operations. Admins can create and assign leads to sales representatives, while sales users can track lead status, manage customer interactions, and update lead progress. Implemented JWT authentication, role-based access control, lead assignment workflow, advanced filtering, search, pagination, and analytics dashboards. DEMO Credentials Admin Login Email-pratiksha@gmail.com Password-123456 Sales Login Email-divya@gmail.com Password-123456',
     tech: ['React.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
     live: 'https://leadflow-crm-gilt.vercel.app',
+    github: 'https://github.com/pratut04/leadflow-crm',
     image: 'https://www.engagebay.com/blog/wp-content/uploads/2019/12/CRM-3-1080x675.jpg',
   },
   {
@@ -62,6 +63,7 @@ const FEATURED_PROJECTS = [
     description: 'A full-stack blog management application that enables users to browse, search, and filter blogs dynamically without page reloads using AJAX and jQuery. The platform includes an admin dashboard for creating, updating, and deleting blogs, along with category management and image uploads. Built with PHP/Laravel, MySQL, and responsive frontend technologies to deliver a seamless user experience across devices. DEMO Credentials: Admin Login Email-divya@gmail.com Password: 12345678 User Login Email-riya@gmail.com Password-123456789',
     tech: ['Laravel', 'PHP', 'Tailwind CSS', 'MySQL', 'JavaScript', 'AJAX'],
     live: 'https://jobyaari-blog-production-ad66.up.railway.app/',
+    github: 'https://github.com/pratut04/jobyaari-blog',
     image: 'https://www.jobsoid.com/wp-content/uploads/2020/03/Free-Job-Description-Builder-for-Hiring-Teams-Blog-Image.jpg',
   },
 ];
@@ -72,6 +74,7 @@ const OTHER_PROJECTS = [
     description: 'Built a GitHub-inspired collaboration platform with authentication, repository management, pull requests, and issue tracking. Implemented JWT-secured user sessions, role-based permissions, and RESTful APIs for repository CRUD, branch management, and collaborative workflows inspired by GitHub Actions. DEMO Credentials: User → Email: siddhi@gmail.com | Password: 123456',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST API'],
     live: 'https://github-clone-project-seven.vercel.app/',
+    github: 'https://github.com/pratut04/Github-Clone-Project',
     image: 'https://cdn.mos.cms.futurecdn.net/W5LnBksnN2E3PTCdgDF9g3-1200-80.png',
   },
   {
@@ -79,6 +82,7 @@ const OTHER_PROJECTS = [
     description: 'Built a modern AI-powered support dashboard with ticket management, analytics, and real-time KPI monitoring. Implemented interactive charts, global search, role-based navigation, notifications, and a responsive SaaS-style interface using reusable React components. DEMO Credentials Admin Login admin@demo.com Password-demo123',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST API'],
     live: 'https://ai-dashboard-tau-eight.vercel.app/',
+    github: 'https://github.com/pratut04/AI-Dashboard',
     image: 'https://growth-onomics.com/wp-content/uploads/2025/05/image_c0978627130cb7fdeef556d5cbb0f31a-1024x683.jpeg',
   },
   {
@@ -86,7 +90,17 @@ const OTHER_PROJECTS = [
     description: 'Built an AI-powered ATS Resume Checker that analyzes resumes for ATS compatibility, keyword matching, section validation, and overall resume quality. Implemented secure PDF upload, instant ATS scoring, personalized improvement tips, and a modern responsive interface to help job seekers optimize their resumes for better interview opportunities.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST API'],
     live: 'https://ats-resume-checker-ecru-zeta.vercel.app/',
+    github: 'https://github.com/pratut04/ATS-Resume-Checker',
     image: 'https://assets.hipcv.com/content/Illustrations-for-content/ats-checker.jpeg',
+  },
+  {
+    title: 'AG About Page',
+    category: 'Frontend Assignment',
+    description: 'Responsive one-page frontend implementation based on a provided Figma design, built with React.js and Tailwind CSS. Includes smooth scroll-based animations, responsive layouts, and reusable components.',
+    tech: ['React.js', 'Tailwind CSS', 'Figma', 'Vercel', 'Scroll Animations'],
+    live: 'https://ag-about-page-three.vercel.app/',
+    github: 'https://github.com/pratut04/ag-about-page',
+    image: '/ag-about-page-thumbnail.png',
   },
 ];
 
@@ -96,38 +110,38 @@ const SKILLS_GRID = [
     icon: Code2,
     skills: [
       { name: 'JavaScript (ES6+)', level: 90 },
-      { name: 'TypeScript',        level: 65 },
-      { name: 'C#',                level: 80 },
-      { name: 'HTML5 / CSS3',      level: 85 },
+      { name: 'TypeScript', level: 65 },
+      { name: 'C#', level: 80 },
+      { name: 'HTML5 / CSS3', level: 85 },
     ],
   },
   {
     category: 'Frameworks & Libraries',
     icon: Layers,
     skills: [
-      { name: 'React.js',    level: 92 },
-      { name: 'Node.js',     level: 88 },
-      { name: 'Express.js',  level: 85 },
-      { name: 'Tailwind CSS',level: 60 },
+      { name: 'React.js', level: 92 },
+      { name: 'Node.js', level: 88 },
+      { name: 'Express.js', level: 85 },
+      { name: 'Tailwind CSS', level: 60 },
     ],
   },
   {
     category: 'Database Systems',
     icon: Database,
     skills: [
-      { name: 'MongoDB',      level: 82 },
-      { name: 'PostgreSQL',   level: 80 },
-      { name: 'MySQL',        level: 85 },
-      { name: 'MS SQL Server',level: 70 },
+      { name: 'MongoDB', level: 82 },
+      { name: 'PostgreSQL', level: 80 },
+      { name: 'MySQL', level: 85 },
+      { name: 'MS SQL Server', level: 70 },
     ],
   },
   {
     category: 'Tools & Platforms',
     icon: GitBranch,
     skills: [
-      { name: 'Git / GitHub',    level: 88 },
-      { name: 'Docker',          level: 60 },
-      { name: 'Postman',         level: 85 },
+      { name: 'Git / GitHub', level: 88 },
+      { name: 'Docker', level: 60 },
+      { name: 'Postman', level: 85 },
       { name: 'Vercel / Render', level: 80 },
     ],
   },
@@ -135,20 +149,20 @@ const SKILLS_GRID = [
     category: 'Backend & APIs',
     icon: Server,
     skills: [
-      { name: 'REST APIs',      level: 90 },
-      { name: 'JWT Auth',       level: 85 },
-      { name: 'ASP.NET Core',   level: 72 },
-      { name: 'Laravel / PHP',  level: 50 },
+      { name: 'REST APIs', level: 90 },
+      { name: 'JWT Auth', level: 85 },
+      { name: 'ASP.NET Core', level: 72 },
+      { name: 'Laravel / PHP', level: 50 },
     ],
   },
   {
     category: 'Cloud & DevOps',
     icon: Globe,
     skills: [
-      { name: 'Vercel',      level: 82 },
-      { name: 'Railway',     level: 78 },
-      { name: 'Render',      level: 78 },
-      { name: 'ServiceNow',  level: 70 },
+      { name: 'Vercel', level: 82 },
+      { name: 'Railway', level: 78 },
+      { name: 'Render', level: 78 },
+      { name: 'ServiceNow', level: 70 },
     ],
   },
 ];
@@ -185,9 +199,9 @@ function ScrollProgress() {
   const [pct, setPct] = useState(0);
   useEffect(() => {
     const onScroll = () => {
-      const el  = document.documentElement;
+      const el = document.documentElement;
       const top = el.scrollTop || document.body.scrollTop;
-      const h   = el.scrollHeight - el.clientHeight;
+      const h = el.scrollHeight - el.clientHeight;
       setPct(h > 0 ? (top / h) * 100 : 0);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -207,8 +221,8 @@ function ScrollProgress() {
 function Navbar() {
   const { dark, toggle } = React.useContext(ThemeContext);
   const [scrolled, setScrolled] = useState(false);
-  const [open,     setOpen]     = useState(false);
-  const [active,   setActive]   = useState('hero');
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState('hero');
 
   useEffect(() => {
     const onScroll = () => {
@@ -264,7 +278,7 @@ function Navbar() {
                 onClick={() => go(l.id)}
                 className="px-3.5 py-1.5 text-sm font-semibold rounded-xl transition-all duration-200"
                 style={{
-                  color:      active === l.id ? 'var(--accent)' : 'var(--text-secondary)',
+                  color: active === l.id ? 'var(--accent)' : 'var(--text-secondary)',
                   background: active === l.id ? 'var(--accent-light)' : 'transparent',
                 }}
               >
@@ -310,7 +324,7 @@ function Navbar() {
                 onClick={() => go(l.id)}
                 className="w-full text-left px-4 py-2.5 text-sm font-semibold rounded-xl transition-colors mb-0.5"
                 style={{
-                  color:      active === l.id ? 'var(--accent)' : 'var(--text-secondary)',
+                  color: active === l.id ? 'var(--accent)' : 'var(--text-secondary)',
                   background: active === l.id ? 'var(--accent-light)' : 'transparent',
                 }}
               >
@@ -329,17 +343,17 @@ function Navbar() {
 function HeroSection() {
   const [typed, setTyped] = useState('');
   const roles = ['Full Stack Developer', 'ASP.NET Core Developer', 'MERN Stack Developer', 'React Developer'];
-  const [ri,  setRi]  = useState(0);
-  const [ci,  setCi]  = useState(0);
+  const [ri, setRi] = useState(0);
+  const [ci, setCi] = useState(0);
   const [del, setDel] = useState(false);
 
   useEffect(() => {
     const cur = roles[ri];
     const t = setTimeout(() => {
-      if (!del && ci < cur.length)       { setTyped(cur.slice(0, ci + 1)); setCi(c => c + 1); }
+      if (!del && ci < cur.length) { setTyped(cur.slice(0, ci + 1)); setCi(c => c + 1); }
       else if (!del && ci === cur.length) { setTimeout(() => setDel(true), 1800); }
-      else if (del && ci > 0)            { setTyped(cur.slice(0, ci - 1)); setCi(c => c - 1); }
-      else                               { setDel(false); setRi(i => (i + 1) % roles.length); }
+      else if (del && ci > 0) { setTyped(cur.slice(0, ci - 1)); setCi(c => c - 1); }
+      else { setDel(false); setRi(i => (i + 1) % roles.length); }
     }, del ? 50 : 80);
     return () => clearTimeout(t);
   }, [ci, del, ri]);
@@ -564,9 +578,9 @@ function AboutSection() {
           {/* Stats + why */}
           <div className="space-y-4">
             {[
-              { icon: Code2,     value: '6+',  label: 'Projects Completed' },
-              { icon: Briefcase, value: '1',   label: 'Internship Completed' },
-              { icon: Award,     value: '3',   label: 'Certifications Earned' },
+              { icon: Code2, value: '6+', label: 'Projects Completed' },
+              { icon: Briefcase, value: '1', label: 'Internship Completed' },
+              { icon: Award, value: '3', label: 'Certifications Earned' },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="stat-card">
                 <div className="stat-icon">
@@ -583,9 +597,9 @@ function AboutSection() {
               <h4 className="font-bold mb-4 text-sm" style={{ color: 'var(--text-primary)' }}>Why Choose Me?</h4>
               <div className="space-y-3">
                 {[
-                  { icon: CheckCircle2, title: 'Quality Focused',  desc: 'Meticulous attention to detail and clean code practices' },
-                  { icon: Zap,          title: 'Fast Learner',     desc: 'Quickly adapts to new technologies and frameworks' },
-                  { icon: Users,        title: 'Problem Solver',   desc: 'Passionate about solving complex technical challenges' },
+                  { icon: CheckCircle2, title: 'Quality Focused', desc: 'Meticulous attention to detail and clean code practices' },
+                  { icon: Zap, title: 'Fast Learner', desc: 'Quickly adapts to new technologies and frameworks' },
+                  { icon: Users, title: 'Problem Solver', desc: 'Passionate about solving complex technical challenges' },
                 ].map(({ icon: Icon, title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
                     <div className="icon-glow w-9 h-9 flex items-center justify-center flex-shrink-0">
@@ -829,6 +843,18 @@ function FeaturedCard({ p, i }: { p: typeof FEATURED_PROJECTS[0]; i: number }) {
           >
             <Globe size={14} /> Live Demo <ExternalLink size={12} />
           </a>
+          {'github' in p && p.github && (
+            <a
+              href={p.github as string} target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-1.5 font-bold transition-all hover:gap-2 ml-auto"
+              style={{ color: 'var(--text-secondary)' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-secondary)'; }}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" width={14} height={14}><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
+              GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -845,17 +871,39 @@ function OtherCard({ p, i }: { p: typeof OTHER_PROJECTS[0]; i: number }) {
         <img src={p.image} alt={p.title}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
         <div className="img-overlay" />
+        {'category' in p && p.category && (
+          <span
+            className="absolute top-2 right-2 px-2 py-0.5 text-white text-xs font-bold rounded-full shadow"
+            style={{ background: 'linear-gradient(135deg, #7c3aed, #6366f1)' }}
+          >
+            {p.category as string}
+          </span>
+        )}
       </div>
       <div className="p-4">
         <h4 className="font-black text-sm mb-1.5" style={{ color: 'var(--text-primary)' }}>{p.title}</h4>
         <ProjectDescription text={p.description} clamp={3} />
-        <div className="flex items-center justify-between pt-2" style={{ borderTop: '1px solid var(--border)' }}>
+        <div className="flex flex-wrap gap-1.5 mb-3">
+          {p.tech.map(t => <span key={t} className="tech-pill">{t}</span>)}
+        </div>
+        <div className="flex items-center gap-4 pt-2" style={{ borderTop: '1px solid var(--border)' }}>
           <a href={p.live} target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs font-bold hover:gap-2 transition-all"
             style={{ color: 'var(--accent)' }}
           >
-            <Globe size={13} /> View Live
+            <Globe size={13} /> Live Demo
           </a>
+          {'github' in p && p.github && (
+            <a href={p.github as string} target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs font-bold hover:gap-2 transition-all ml-auto"
+              style={{ color: 'var(--text-secondary)' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-secondary)'; }}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" width={13} height={13}><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
+              GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -943,9 +991,9 @@ function EducationSection() {
             </div>
             <div className="space-y-3">
               {[
-                { name: 'MERN Stack Web Development',    issuer: 'Apna College',          period: '2026',             icon: Code2   },
-                { name: 'C# & ASP.NET Core Development', issuer: 'Udemy',                 period: '2026',             icon: Layers  },
-                { name: 'ServiceNow Virtual Intern',      issuer: 'SmartBridge (AICTE)',   period: 'Feb – Apr 2026',   icon: Cpu     },
+                { name: 'MERN Stack Web Development', issuer: 'Apna College', period: '2026', icon: Code2 },
+                { name: 'C# & ASP.NET Core Development', issuer: 'Udemy', period: '2026', icon: Layers },
+                { name: 'ServiceNow Virtual Intern', issuer: 'SmartBridge (AICTE)', period: 'Feb – Apr 2026', icon: Cpu },
               ].map(({ name, issuer, period, icon: Icon }) => (
                 <div
                   key={name}
@@ -1008,8 +1056,8 @@ function ContactSection() {
 
             <div className="grid grid-cols-2 gap-3">
               {[
-                { icon: Mail,  label: 'Email',         value: 'pratikshativale05@gmail.com', href: 'mailto:pratikshativale05@gmail.com' },
-                { icon: Phone, label: 'Phone / Call',  value: '7972215888',                  href: 'tel:+917972215888' },
+                { icon: Mail, label: 'Email', value: 'pratikshativale05@gmail.com', href: 'mailto:pratikshativale05@gmail.com' },
+                { icon: Phone, label: 'Phone / Call', value: '7972215888', href: 'tel:+917972215888' },
                 {
                   label: 'WhatsApp', value: '7972215888', href: 'https://wa.me/917972215888',
                   icon: () => (
