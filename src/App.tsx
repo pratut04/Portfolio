@@ -62,7 +62,7 @@ const FEATURED_PROJECTS = [
     title: 'JobYaari – Job & Blog Platform',
     description: 'A full-stack blog management application that enables users to browse, search, and filter blogs dynamically without page reloads using AJAX and jQuery. The platform includes an admin dashboard for creating, updating, and deleting blogs, along with category management and image uploads. Built with PHP/Laravel, MySQL, and responsive frontend technologies to deliver a seamless user experience across devices. DEMO Credentials: Admin Login Email-divya@gmail.com Password: 12345678 User Login Email-riya@gmail.com Password-123456789',
     tech: ['Laravel', 'PHP', 'Tailwind CSS', 'MySQL', 'JavaScript', 'AJAX'],
-    live: 'https://jobyaari-blog-production-ad66.up.railway.app/',
+    live: 'https://jobyaari-blog-platform-2026.up.railway.app/',
     github: 'https://github.com/pratut04/jobyaari-blog',
     image: 'https://www.jobsoid.com/wp-content/uploads/2020/03/Free-Job-Description-Builder-for-Hiring-Teams-Blog-Image.jpg',
   },
